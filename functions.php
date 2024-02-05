@@ -3,6 +3,7 @@ register_nav_menus(['primary'=> 'Main Menu']);
 
 function luonnonystavat_assets() {
     wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_script('luonnonystavat-scirpt', get_template_directory_uri() . '/js/webpage.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'luonnonystavat_assets');
 
@@ -17,4 +18,16 @@ function luonnonystavat_widgets_init() {
     ));
 }
 add_action('widgets_init', 'luonnonystavat_widgets_init');
+
+function excerpt_read_more() {
+    global $post;
+    return '<a href="' . get_permalink($post->ID) . '"> Read More &raquo;</a>';
+
+}
+add_filter('excerpt_more', 'excerpt_read_more');
+
+function luonnonystavat_theme_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action('after_setup_theme', 'luonnonystavat_theme_setup');
 ?>
