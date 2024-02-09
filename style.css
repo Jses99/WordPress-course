@@ -1,5 +1,5 @@
 /*
-Theme name: Luonnonystävät
+Theme name: My First Theme
 Theme author: Jonna Satta
 */
 
@@ -8,13 +8,13 @@ Theme author: Jonna Satta
 }
 
 #site-container {
-    max-width: 1920px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
 #site-header {
-    background: url('banner.jpg');
+    background: url('banner3.jpeg');
     padding: 100px;
     text-align: center;
     border: solid 2px black;
@@ -154,11 +154,6 @@ main {
     margin-top: 0;
 }
 
-#content #sidebar a {
-    color: turquoise;
-    text-decoration: none;
-}
-
 #content #sidebar h2, #content #sidebar h1 {
     background-color: rgb(39, 104, 104);
     color: white;
@@ -170,8 +165,10 @@ main {
 
 #site-footer {
     border: solid 2px rgb(39, 104, 104);
+    background-color: rgb(39, 104, 104);
     border-top: none;
     text-align: center;
+    color: white;
     padding: 20px;
 }
 
@@ -183,7 +180,7 @@ main {
         width: 100%;
     }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     #content {
         display: block;
     }
@@ -209,4 +206,7 @@ main {
     #top-navi > div > ul > li:not(:first-child) {
         display: none;
     } 
+}
+@media screen and (max-width: 800px) {
+    #sidebar {display:none;}
 }
